@@ -101,7 +101,7 @@ body {
     .container {
         padding-left: 10%;
         max-height: 900px;
-        background: url("/img/mediaexpert-hero.png") no-repeat center / cover;
+        background: url("../img/mediaexpert-hero.png") no-repeat center / cover;
         
         .hero-info {
             padding: 15% 0;
