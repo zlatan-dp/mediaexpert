@@ -1,0 +1,121 @@
+:root {
+    --black-color: #202020;
+    --white-color: #ffffff;
+    --main-fs: 18px;
+    --main-lh: 1.33;
+    /* --mob-lh: 1.37; */
+    --trans-dur: 250ms;
+    --trans-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black-color);
+    line-height: var(--main-lh);
+    font-size: var(--main-fs);
+    font-weight: 300;
+    margin: 0;
+
+    @media (max-width: 561px) {
+      & {
+        line-height: var(--mob-lh);
+      }
+      
+    }
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  ul,
+  ol {
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  section {
+    margin: 0 auto;
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+  
+  .list {
+    list-style: none;
+  }
+  
+  .container {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .white {
+    color: var(--white-color)
+  }
+
+  .main-title {
+    font-size: 72px;
+    font-weight: 700;
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;}
+
+
+  
+  /* hero */
+
+  .hero {
+    .container {
+        padding-left: 10%;
+        max-height: 900px;
+        background: url("/img/mediaexpert-hero.png") no-repeat center / cover;
+        
+        .hero-info {
+            padding: 15% 0;
+            max-width: 609px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+
+            .hero-text {
+                font-style: 22px;
+            }
+            .hero-btn {
+                margin-right: auto;
+                padding: 18px 82px;
+            }
+        }
+    }
+    
+  }
