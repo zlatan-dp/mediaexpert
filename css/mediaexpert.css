@@ -89,7 +89,9 @@ body {
     border: none;
     border-radius: 30px;
     font-weight: 500;
-    font-size: 16px;}
+    font-size: 16px;
+    cursor: pointer;
+}
 
 
   
@@ -108,14 +110,104 @@ body {
             flex-direction: column;
             gap: 60px;
 
+            .hero-titles {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
             .hero-text {
                 font-style: 22px;
             }
-            .hero-btn {
+            .btn-hero {
                 margin-right: auto;
                 padding: 18px 82px;
+                background-color: var(--white-color);
+            }
+        }
+    }    
+  }
+
+  /* mediaexpert */
+
+  .mediaexpert {
+    .container {
+        display: flex;
+
+        .mediaexpert-logo {
+            display: flex;
+            justify-content: center;
+            background-color: var(--black-color);
+            width: 40%;
+            padding: 50px 0px;            
+        }
+
+        .mediaexpert-action {
+            background-color: #FFF200;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            gap: 80px;
+            padding-left: 80px;
+            
+            .action-title {
+                font-size: 56px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .action-text {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .btn-action {
+                background-color: var(--black-color);
+                color: var(--white-color);
+                padding: 18px 109px;
+            }
+
+        }
+    }
+  }
+
+  /* conditions */
+
+  .conditions {
+    .container {
+        padding: 160px 0;
+        max-width: 1216px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        align-items: center;
+
+        .conditions-titles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .conditions-text {
+            text-align: center;
+        }
+
+        .conditions-list {
+            display: flex;
+            gap: 40px;
+
+            .conditions-item {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+
+                .conditions-item-text {
+                    text-align: center;
+                }
             }
         }
     }
-    
   }
