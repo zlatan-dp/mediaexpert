@@ -1,6 +1,7 @@
 :root {
     --black-color: #202020;
     --white-color: #ffffff;
+    --accent-color: #0F59D4;
     --main-fs: 18px;
     --main-lh: 1.33;
     /* --mob-lh: 1.37; */
@@ -44,7 +45,8 @@ body {
     display: block;
     width: 100%;
     height: auto;
-  }
+    scale: 1.01;
+      }
   
   section {
     margin: 0 auto;
@@ -171,6 +173,76 @@ body {
     }
   }
 
+   /* offers */
+
+   .offers {
+    .container {
+
+      padding-left: 10px;
+      padding-right: 10px;
+      max-height: 1046px;
+      background: url("../img/mediaexpert-offers.png") no-repeat center / cover;
+      
+
+      .offers-wrap {
+        padding-top: 7%;
+        padding-bottom: 7%;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .offers-list {
+        display: flex;
+        gap: 30px;
+        max-width: 1520px;
+
+        .offers-item {
+          background-color: #FFFFFFCC;
+          border-radius: 20px;
+          overflow: hidden;
+          flex: 1;
+
+          .offers-info-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 10px 60px 10px;
+
+            .offer-name {
+              font-size: 36px;
+              font-weight: 400;
+              line-height: 1;
+              margin-bottom: 30px;
+
+            }
+
+            .offer-price {
+              font-size: 104px;
+              font-weight: 700;
+              color: var(--accent-color);
+              line-height: 1;
+              margin-bottom: 60px;
+
+              .price-currency {
+                font-size: 32px;
+                font-weight: 400;
+                margin-left: 8px;
+              }
+            }
+
+            .btn-offer {
+              background-color: var(--black-color);
+              color: var(--white-color);
+              padding: 10px 51px;
+            }
+          }
+        }
+      }        
+    }
+  }
+
   /* conditions */
 
   .conditions {
@@ -211,3 +283,5 @@ body {
         }
     }
   }
+
+ 
