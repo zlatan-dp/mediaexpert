@@ -34,7 +34,7 @@
           <p class="title white">za Twoją opinię o telewizorze KIVI</p>
         </div>
           <p class="hero-text white">Kup telewizor KIVI w Media Expert, zostaw opinię i otrzymaj rabat na kolejne zakupy!</p>
-          <button type="button" class="btn btn-hero">Odbierz prezent</button>
+          <button type="button" class="btn btn-hero" data-modal-open>Odbierz prezent</button>
         </div>
       </div>
     </section>
@@ -76,7 +76,7 @@
           <div class="offers-info-wrap">
             <p class="offer-name">KidsTV</p>
             <p class="offer-price">200<span class="price-currency">zł</span></p>
-            <button type="button" class="btn btn-offer">Odbierz prezent</button>
+            <button type="button" class="btn btn-offer" data-modal-open>Odbierz prezent</button>
           </div>
         </li>
         <li class="offers-item">
@@ -86,7 +86,7 @@
           <div class="offers-info-wrap">
             <p class="offer-name">32″-40″TV</p>
             <p class="offer-price">100<span class="price-currency">zł</span></p>
-            <button type="button" class="btn btn-offer">Odbierz prezent</button>
+            <button type="button" class="btn btn-offer" data-modal-open>Odbierz prezent</button>
           </div>
         </li>
         <li class="offers-item">
@@ -96,7 +96,7 @@
           <div class="offers-info-wrap">
             <p class="offer-name">43″-55″</p>
             <p class="offer-price">150<span class="price-currency">zł</span></p>
-            <button type="button" class="btn btn-offer">Odbierz prezent</button>
+            <button type="button" class="btn btn-offer" data-modal-open>Odbierz prezent</button>
           </div>
         </li>
         <li class="offers-item">
@@ -106,7 +106,7 @@
           <div class="offers-info-wrap">
             <p class="offer-name">65″</p>
             <p class="offer-price">200<span class="price-currency">zł</span></p>
-            <button type="button" class="btn btn-offer">Odbierz prezent</button>
+            <button type="button" class="btn btn-offer" data-modal-open>Odbierz prezent</button>
           </div>
         </li>
       </ul>
@@ -237,6 +237,72 @@
       <button type="button" class="btn btn-questions">Odbierz prezent</button>
     </div>
    </section>
+
+   <!-- modal -->
+
+   <div class="backdrop is-hidden" data-modal>
+    <div class="modal-registration">
+      <button type="button" class="modal-close" data-modal-close>
+        <svg class="modal-close-icon" width="18" height="18">
+          <use href="./img/svg/icons.svg#icon-modal-close"></use>
+        </svg>
+      </button>
+      <p class="modal-title">Rejestracja uczestnictwa</p>
+      <form class="modal-form">
+        <div class="inputs-wrap">
+          <input type="text" name="first-name" class="input" placeholder="Imię*" autocomplete="off" required>
+        <input type="text" name="second-name" class="input" placeholder="Nazwisko*" autocomplete="off" required>
+        <input type="email" name="email" class="input" placeholder="Email*" autocomplete="off" required>
+        <div class="phone-wrap">
+          <input type="text" name="prefix" class="input phone-prefix" value="+48" readonly>
+          <input type="text" name="phone" class="input" placeholder="Numer telefonu*" autocomplete="off" required>
+        </div>
+        <select name="model-tv" id="" class="input select" placeholder="Data zakupu*" required>
+          <option value disabled selected hidden>Data zakupu*</option>
+          <option value="KidsTV">KidsTV</option>
+          <option value="32H760QB">32H760QB</option>
+        </select>
+        </div>
+        <div class="upload-wrap">
+          <div class="upload-title-wrap">
+            <p class="upload-title">Zrzutu ekranu z Państwa opinią</p>
+            <p class="upload-icon">?</p>
+          </div>
+          <label for="screen-upload" class="upload-btn">
+            Dołącz
+          </label>
+          <input type="file" id="screen-upload" name="file">
+          <p class="upload-text">
+            Państwa imię w opinii musi zgadzać się z danymi podanymi w formularzu. Maksymalny rozmiar pliku to 10 MB.
+          </p>
+        </div>
+        <div class="upload-wrap">
+          <div class="upload-title-wrap">
+            <p class="upload-title">Zdjęcie paragonu</p>
+            <p class="upload-icon">?</p>
+          </div>
+          <label for="receipt-upload" class="upload-btn">
+            Dołącz
+          </label>
+          <input type="file" id="receipt-upload" name="file">
+          <p class="upload-text">
+            Informacje na paragonie muszą być wyraźne i łatwe do odczytania. Maksymalny rozmiar pliku to 10 MB.
+          </p>
+        </div>
+        <div class="checkbox-wrap">
+          <input type="checkbox" name="offer" id="submit-politicka" required>
+          <label for="submit-politicka" class="checkbox-icon"></label>
+          <label for="submit-politicka" class="politicka-text">
+            Rejestrując się, użytkownik wyraża zgodę na warunki oferty publicznej (polityka prywatności) oraz wyraża zgodę na gromadzenie i przetwarzanie danych osobowych zgodnie z prawodawstwem UE, w szczególności ogólnym rozporządzeniem o ochronie danych (RODO) Unii Europejskiej
+          </label>
+        </div>
+        <button type="submit" class="btn-submit">Wyślij formularz</button>
+        
+      </form>
+    </div>
+   </div>
+
    <script src="./js/questions.js"></script>
+   <script src="./js/modal.js"></script>
   </body>
 </html>
