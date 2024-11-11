@@ -77,6 +77,12 @@ body {
 
     @media (min-width: 561px) {
       & {
+        font-size: 54px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      & {
         font-size: 72px;
       }
     }
@@ -137,9 +143,15 @@ body {
             @media (min-width: 561px) {
               & {
                 padding: 15% 0;
-                max-width: 609px;
+                max-width: 309px;
                 gap: 60px;
 
+              }
+            }
+
+            @media (min-width: 1280px) {
+              & {
+                max-width: 609px;
               }
             }
 
@@ -160,6 +172,12 @@ body {
                   font-size: 40px;
 
                   @media (min-width: 561px) {
+                    & {
+                      font-size: 54px;      
+                    }
+                  }
+
+                  @media (min-width: 1280px) {
                     & {
                       font-size: 72px;      
                     }
@@ -202,7 +220,7 @@ body {
         display: flex;
         flex-direction: column;
 
-        @media (min-width: 561px) {
+        @media (min-width: 980px) {
           & {
             flex-direction: row;
           }
@@ -211,12 +229,13 @@ body {
         .mediaexpert-logo {          
             display: flex;
             justify-content: flex-start;
+            align-items: center;
             background-color: var(--black-color);
             width: 100%;  
             padding: 16px 20px;  
 
             
-            @media (min-width: 561px) {
+            @media (min-width: 980px) {
               & {
                 width: 40%;
                 padding: 50px 10px;  
@@ -248,10 +267,15 @@ body {
 
             @media (min-width: 561px) {
               & {
-                gap: 80px;
-                padding: 0 0 0 80px;
+                gap: 20px;
+                padding: 20px 20px 20px 20px;
                 flex-direction: row;
                 align-items: center;
+              }
+            }
+            @media (min-width: 980px) {
+              & {
+                justify-content: space-around;
               }
           }
             
@@ -261,6 +285,12 @@ body {
                 margin-bottom: 10px;
 
                 @media (min-width: 561px) {
+                  & {
+                    font-size: 44px;
+                  }
+                }
+
+                @media (min-width: 1280px) {
                   & {
                     font-size: 56px;
                   }
@@ -278,20 +308,27 @@ body {
                     max-width: 100%;
                   }
               }
-          }
-
+          }       
+            
             .btn-action {
-                background-color: var(--black-color);
-                color: var(--white-color);
-                padding: 18px 109px;
-
-                @media (max-width: 560px) {
-                  & {
-                    font-size: 14px;
-                    padding: 10px 70px;
-                  }
-              }
-            }
+              flex-shrink: 0;
+              background-color: var(--black-color);
+              color: var(--white-color);
+              padding: 18px 109px;
+              
+              @media (max-width: 1280px) {
+                & {
+                  font-size: 14px;
+                  padding: 18px 70px;
+                }
+            }         
+              @media (max-width: 560px) {
+                & {
+                  font-size: 14px;
+                  padding: 10px 70px;
+                }
+            }         
+          }            
         }
     }
   }
@@ -311,44 +348,103 @@ body {
           background: url("../img/mediaexpert-offers.png") no-repeat center / cover;
           padding-left: 10px;
           padding-right: 10px;
+          /* max-height: 1046px; */
+        }
+
+    }
+      @media (min-width: 1150px) {
+        & {
           max-height: 1046px;
         }
     }
-      
-      .btn-terms-conditions {
+
+      .terms-conditions-wrap {
         position: absolute;
         top: 20px;
         right: 10px;
-        border: none;
-        background-color: transparent;
+        z-index: 5;
 
-        @media (min-width: 561px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+
+        @media (min-width: 1150px) {
           & {
             top: 40px;
             right: 136px;
           }
         }
 
-        .terms-conditions{
-          font-style: 16px;
-          font-weight: 500;
-          color: #787878;
-          display: flex;
-          gap: 12px;
-          align-items: center;
-  
-          &::after{
-            content: '';
-            display: block;
+        .btn-terms-conditions {
+
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          .terms-conditions{
+            font-style: 16px;
+            font-weight: 500;
+            color: #787878;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+    
+            &::after{
+              content: '';
+              display: block;
+              width: 24px;
+              height: 24px;
+              background-image: url('../img/svg/arrow.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+            }  
+          }
+        }
+
+        .terms-conditions-list-wrap {
+          position: relative;
+
+          .terms-close {
+            position: absolute;
+            right: 14px;
+            top: 16px;
             width: 24px;
             height: 24px;
-            background-image: url('../img/svg/arrow.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-          }  
-        }
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+          }
+  
+          .terms-conditions-list {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            padding: 50px 17px;
+            background-color: var(--white-color);
+            border-radius: 20px;
+  
+            @media (min-width: 400px) {
+              & {
+                width: 340px;
+              }             
+              }
+  
+            @media (min-width: 880px) {
+              & {
+                width: 680px;
+              }              
+              }
+            }        
+  
+            .terms-conditions-list a {
+              color: var(--black-color);
+            }
+        }        
       }
-
+      
       .offers-wrap {
         padding-top: 80px;
         padding-bottom: 50px;
@@ -358,6 +454,14 @@ body {
         align-items: center;
 
         @media (min-width: 561px) {
+          & {
+            padding-top: 10%;
+            padding-bottom: 7%;
+            gap: 80px;
+          }
+      }
+
+        @media (min-width: 1150px) {
           & {
             padding-top: 7%;
             padding-bottom: 7%;
@@ -380,7 +484,16 @@ body {
         @media (min-width: 561px) {
           & {
             flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 794px;
+          }
+      }
+        @media (min-width: 1150px) {
+          & {
+            flex-direction: row;
             gap: 30px;
+            max-width: 1520px;
           }
       }
 
@@ -389,6 +502,8 @@ body {
           border-radius: 20px;
           overflow: hidden;
           flex: 1;
+          min-width: 255px;
+          max-width: 388px;
 
           .offers-info-wrap {
             display: flex;
@@ -452,7 +567,7 @@ body {
               @media (min-width: 561px) {
                 & {
                   padding: 10px 51px;
-                  font-style: 16px;
+                  font-size: 16px;
                   }
               }
             }
@@ -475,6 +590,13 @@ body {
         align-items: center;
 
         @media (min-width: 561px) {
+          & {
+            padding: 80px 0;
+            gap: 80px;
+            }
+        }
+
+        @media (min-width: 1150px) {
           & {
             padding: 160px 0;
             gap: 80px;
@@ -510,11 +632,22 @@ body {
             display: flex;
             gap: 60px;
             flex-direction: column;
+            padding: 0 10px;
 
             @media (min-width: 561px) {
               & {
                 gap: 40px;
                 flex-direction: row;
+                flex-wrap: wrap;
+                max-width: 600px;
+                }
+            }
+
+            @media (min-width: 1150px) {
+              & {
+                gap: 40px;
+                flex-direction: row;
+                max-width: 100%;
                 }
             }
 
@@ -524,6 +657,7 @@ body {
                 flex-direction: column;
                 gap: 24px;
                 align-items: center;
+                min-width: 180px;
 
                 .conditions-item-text {
                     text-align: center;
@@ -567,8 +701,14 @@ body {
 
       @media (min-width: 561px) {
         & {
-          padding: 160px 10px;
+          padding: 80px 20px;
           gap: 80px;
+          }
+      }
+
+      @media (min-width: 1150px) {
+        & {
+          padding: 160px 20px;
           }
       }
 
@@ -606,12 +746,18 @@ body {
 
             .question {
               font-size: 17px;
-              font-weight: 600;       
+              font-weight: 600;      
+              transition: color var(--trans-dur) var(--trans-timing-function); 
               
               @media (min-width: 561px) {
                 & {
                   font-size: 24px;
                   }
+              }
+
+              &:hover,
+              &:focus {
+                color: var(--accent-color);
               }
             }
 
@@ -674,6 +820,7 @@ body {
 
    .backdrop {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100vw;
@@ -689,17 +836,25 @@ body {
 
     .modal-registration {
       position: absolute;
-      width: 680px;
+      width: 90%;
       max-height: 98vh;
       overflow-y: auto;
+      z-index: 10;
 
-      padding: 68px 130px;
+      padding: 50px 17px;
       top: 50%;
       left: 50%;
       background-color: var(--white-color);
       border-radius: 20px;
       transform: translate(-50%, -50%) scale(1);
       transition: transform var(--trans-dur) var(--trans-timing-function);
+
+      @media (min-width: 700px) {
+        & {
+          width: 680px;
+          padding: 68px 130px;
+        }
+      }
       
 
       .modal-close {

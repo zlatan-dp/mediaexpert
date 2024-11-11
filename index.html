@@ -53,7 +53,9 @@
             <p class="action-title">Kup TV KIVI</p>
             <p class="action-text">i odbierz kod promocyjny na kolejne zakupy!</p>
           </div>
-          <button type="button" class="btn btn-action">Kup teraz</button>
+          
+          <a href="https://www.mediaexpert.pl/search?query[menu_item]=&query[querystring]=kivi" target="_blank" class="btn btn-action link">Kup teraz</a>
+        
         </div>        
       </div>
     </section>
@@ -62,9 +64,27 @@
 
   <section class="offers">
     <div class="container">
-      <button type="button" class="btn-terms-conditions">
-        <span class="terms-conditions">Zasady i warunki</span>
-      </button>
+      <div class="terms-conditions-wrap">
+        <button type="button" class="btn-terms-conditions" data-terms-open>
+          <span class="terms-conditions">Zasady i warunki</span>
+        </button>
+        <div class="terms-conditions-list-wrap is-hidden" data-modal-terms>
+          <button type="button" class="terms-close" data-terms-close>
+            <svg class="modal-close-icon" width="18" height="18">
+              <use href="./img/svg/icons.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+          <ul class="terms-conditions-list list">
+            <li class="terms-conditions-item">
+              <a class="link" href="./privacy-statement.html" target="_blank">Polityka prywatności</a>
+            </li>
+            <li class="terms-conditions-item">
+              <a class="link" href="./official-rules.html" target="_blank">Oficjalne zasady promocji</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       
       <div class="offers-wrap">
       <h2 class="main-title">Wybierz swoją ofertę</h2>
@@ -168,7 +188,7 @@
           <p class="action-title">Kup TV KIVI</p>
           <p class="action-text">i odbierz kod promocyjny na kolejne zakupy!</p>
         </div>
-        <button type="button" class="btn btn-action">Kup teraz</button>
+        <a href="https://www.mediaexpert.pl/search?query[menu_item]=&query[querystring]=kivi" target="_blank" class="btn btn-action link">Kup teraz</a>
       </div>        
     </div>
   </section>
@@ -234,7 +254,7 @@
           <p class="answer">Zarejestruj się na stronie: <a href="https://kivismart.com/pl" target="_blank">kivismart.com/pl</a> i otrzymaj kod promocyjny na swoją skrzynkę e-mail.</p>
         </li>
       </ul>
-      <button type="button" class="btn btn-questions">Odbierz prezent</button>
+      <button type="button" class="btn btn-questions" data-modal-open>Odbierz prezent</button>
     </div>
    </section>
 
@@ -258,10 +278,21 @@
           <input type="text" name="phone" class="input" placeholder="Numer telefonu*" autocomplete="off" required>
         </div>
         <select name="model-tv" id="" class="input select" placeholder="Data zakupu*" required>
-          <option value disabled selected hidden>Data zakupu*</option>
+          <option value disabled selected hidden>Model TV*</option>
           <option value="KidsTV">KidsTV</option>
           <option value="32H760QB">32H760QB</option>
+          <option value="32H760QW">32H760QW</option>
+          <option value="32F760QB">32F760QB</option>
+          <option value="32F760QW">32F760QW</option>
+          <option value="40F760QB">40F760QB</option>
+          <option value="43U760QB">43U760QB</option>
+          <option value="43U760QW">43U760QW</option>
+          <option value="50U760QB">50U760QB</option>
+          <option value="55U760QB">55U760QB</option>
+          <option value="55U760QW">55U760QW</option>
+          <option value="65U760QB">65U760QB</option>
         </select>
+        <input type="text" name="date" class="input" id="dateInput" placeholder="Data zakupu*" required onfocus="(this.type='date')" onblur="(this.type='text')">
         </div>
         <div class="upload-wrap">
           <div class="upload-title-wrap">
