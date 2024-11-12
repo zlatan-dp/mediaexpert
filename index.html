@@ -275,7 +275,7 @@
         <input type="email" name="email" class="input" placeholder="Email*" autocomplete="off" required>
         <div class="phone-wrap">
           <input type="text" name="prefix" class="input phone-prefix" value="+48" readonly>
-          <input type="text" name="phone" class="input" placeholder="Numer telefonu*" autocomplete="off" required>
+          <input type="tel" name="phone" class="input" placeholder="Numer telefonu*" autocomplete="off" pattern="\d{9}" required>
         </div>
         <select name="model-tv" id="" class="input select" placeholder="Data zakupu*" required>
           <option value disabled selected hidden>Model TV*</option>
@@ -310,7 +310,6 @@
         <div class="upload-wrap">
           <div class="upload-title-wrap">
             <p class="upload-title">Zdjęcie paragonu</p>
-            <p class="upload-icon">?</p>
           </div>
           <label for="receipt-upload" class="upload-btn">
             Dołącz
@@ -327,7 +326,7 @@
             Rejestrując się, użytkownik wyraża zgodę na warunki oferty publicznej (polityka prywatności) oraz wyraża zgodę na gromadzenie i przetwarzanie danych osobowych zgodnie z prawodawstwem UE, w szczególności ogólnym rozporządzeniem o ochronie danych (RODO) Unii Europejskiej
           </label>
         </div>
-        <button type="submit" class="btn-submit">Wyślij formularz</button>
+        <button type="submit" class="btn-submit" id="submit-btn" disabled>Wyślij formularz</button>
         
       </form>
     </div>
@@ -335,5 +334,6 @@
 
    <script src="./js/questions.js"></script>
    <script src="./js/modal.js"></script>
+   <script src="/js/submit-btn.js"></script>
   </body>
 </html>

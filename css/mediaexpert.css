@@ -1035,6 +1035,11 @@ body {
         cursor: pointer;
         color: var(--white-color);
         background-color: var(--black-color);
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #D9D9D9;
+        }
       }
     }
    }
