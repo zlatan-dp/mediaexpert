@@ -820,11 +820,15 @@ body {
 
    .backdrop {
     position: fixed;
+    display: flex;
+    padding: 20px 0;
     z-index: 10;
+    align-items: flex-start;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;  
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
     overflow-y: auto;
     transition: opacity var(--trans-dur) var(--trans-timing-function),
@@ -835,18 +839,19 @@ body {
     }
 
     .modal-registration {
-      position: absolute;
+      position: relative;
       width: 90%;
-      max-height: 98vh;
-      overflow-y: auto;
+      height: none;
+      margin: auto;
+      /* max-height: 98vh; */
+      /* overflow-y: auto; */
       z-index: 10;
-
       padding: 50px 17px;
-      top: 50%;
-      left: 50%;
+      /* top: 50%; */
+      /* left: 50%; */
       background-color: var(--white-color);
       border-radius: 20px;
-      transform: translate(-50%, -50%) scale(1);
+      /* transform: translate(-50%, -50%) scale(1); */
       transition: transform var(--trans-dur) var(--trans-timing-function);
 
       @media (min-width: 700px) {
@@ -854,8 +859,7 @@ body {
           width: 680px;
           padding: 68px 130px;
         }
-      }
-      
+      }      
 
       .modal-close {
         position: absolute;
