@@ -404,6 +404,8 @@ body {
 
         .terms-conditions-list-wrap {
           position: relative;
+          transition: opacity var(--trans-dur) var(--trans-timing-function),
+    visibility var(--trans-dur) var(--trans-timing-function);
 
           .terms-close {
             position: absolute;
@@ -434,7 +436,7 @@ body {
   
             @media (min-width: 880px) {
               & {
-                width: 680px;
+                width: 380px;
               }              
               }
             }        
