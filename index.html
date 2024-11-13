@@ -270,12 +270,12 @@
       <p class="modal-title">Rejestracja uczestnictwa</p>
       <form class="modal-form">
         <div class="inputs-wrap">
-          <input type="text" name="first-name" class="input" placeholder="Imię*" autocomplete="off" required>
-        <input type="text" name="second-name" class="input" placeholder="Nazwisko*" autocomplete="off" required>
+          <input type="text" name="first-name" class="input" placeholder="Imię*" autocomplete="off" minlength="2" required>
+        <input type="text" name="second-name" class="input" placeholder="Nazwisko*" autocomplete="off" minlength="2" required>
         <input type="email" name="email" class="input" placeholder="Email*" autocomplete="off" required>
         <div class="phone-wrap">
           <input type="text" name="prefix" class="input phone-prefix" value="+48" readonly>
-          <input type="tel" name="phone" class="input" placeholder="Numer telefonu*" autocomplete="off" pattern="\d{9}" required>
+          <input type="tel" name="phone" class="input" placeholder="Numer telefonu*" autocomplete="off" maxlength="9" pattern="\d{9}" required>
         </div>
         <select name="model-tv" class="input select" required>
           <option value disabled selected hidden>Model TV*</option>
@@ -292,7 +292,10 @@
           <option value="55U760QW">55U760QW</option>
           <option value="65U760QB">65U760QB</option>
         </select>
-        <input type="text" name="date" class="input" id="dateInput" placeholder="Data zakupu*" required onfocus="(this.type='date')" onblur="(this.type='text')">
+        <input type="text" name="date" class="input" id="dateInput" 
+       placeholder="Data zakupu*" required 
+       onfocus="(this.type='date')" 
+       onblur="formatDate(this)">
         </div>
         <div class="upload-wrap">
           <div class="upload-title-wrap">
@@ -332,8 +335,6 @@
     </div>
    </div>
 
-   <script src="./js/questions.js"></script>
-   <script src="./js/modal.js"></script>
-   <script src="./js/submit-btn.js"></script>
+   <script src="./js/mediaexpert.js"></script>
   </body>
 </html>
